@@ -3,6 +3,8 @@
 #include <SoftwareSerial.h>
 #include <String.h>
 
+//pin 11 TX
+//Pin 10 RX
 SoftwareSerial mySerial(11,10);
 
 #define MOTORD_AIN1    7
@@ -17,7 +19,7 @@ SoftwareSerial mySerial(11,10);
 #define PUSH2     4
 #define PUSH3     6
 
-char Arreglo[50];
+  char Arreglo[50];
   int tope=0;
   int parte1, parte2, parte3, parte4, parte5, parte6, parte7;
   int parte8, parte9, parte10, parte11, parte12;
@@ -30,10 +32,7 @@ char Arreglo[50];
   float factorMult=0.51;
   int division=204;
 
-  /*int stop=0;
-  int stop2=0;*/
-  
-
+ 
 void setup() {
 
 pinMode(MOTORI_AIN1, OUTPUT);
@@ -45,9 +44,6 @@ pinMode(MOTORD_AIN2, OUTPUT);
 pinMode(MOTORD_PWM, OUTPUT);
 
 
-
-
- 
  Serial.begin(4800); //57600
   while (!Serial) {
   }
@@ -87,8 +83,6 @@ void loop() {
         Serial.print(parte9);
         Serial.println(parte10);
        
-/*Created by David Cruz Ramírez*/
-
           ValPre1= ((parte3*100)+(parte4*10)+(parte5)); //100 a 500
           ValPre2= ((parte8*100)+(parte9*10)+(parte10)); //100 a 500
 
@@ -156,7 +150,3 @@ void loop() {
 
 
 }
-
-/*Created by David Cruz Ramírez*/
-
-/*Created by David Cruz Ramírez*/
